@@ -37,7 +37,7 @@ order = 2;
 Rs = 40; %stop band attenuation, only used in cheby filter not in butterworth
 Ws = 3.5/50; %cutoff freq (everything past is faggy stopband)/sample rat nyquist bullshit
 
-%[b, a] = cheby2(order, Rs, Ws); %cheby2 filter cuz look at the pics it makes sense bitch
+%[b, a] = cheby2(order, Rs, Ws); %cheby2 filter cuz look at the pics it makes sense 
 [b, a] = butter(order, Ws);
 
 dataOut = filter(b, a, y_Acceleration); %apply filter characteristics 
